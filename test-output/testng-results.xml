@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-11T11:58:04 IST" name="Suite" finished-at="2025-07-11T11:59:20 IST" duration-ms="76965">
+    <groups>
+      <group name="PL1">
+        <method signature="RestAssured_TestCases.loginWithSeleniumAndGetCookie()[pri:0, instance:testcases.RestAssured_TestCases@4d722ac9]" name="loginWithSeleniumAndGetCookie" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.getSubunitsTree()[pri:1, instance:testcases.RestAssured_TestCases@4d722ac9]" name="getSubunitsTree" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.getAdminSkills()[pri:2, instance:testcases.RestAssured_TestCases@4d722ac9]" name="getAdminSkills" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.getAdminEdu()[pri:3, instance:testcases.RestAssured_TestCases@4d722ac9]" name="getAdminEdu" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.getAdminLicenses()[pri:4, instance:testcases.RestAssured_TestCases@4d722ac9]" name="getAdminLicenses" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.getAdminLanguages()[pri:5, instance:testcases.RestAssured_TestCases@4d722ac9]" name="getAdminLanguages" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.deleteValidUsers()[pri:6, instance:testcases.RestAssured_TestCases@4d722ac9]" name="deleteValidUsers" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.postNewJobTitles()[pri:7, instance:testcases.RestAssured_TestCases@4d722ac9]" name="postNewJobTitles" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.putJobTitleByID()[pri:8, instance:testcases.RestAssured_TestCases@4d722ac9]" name="putJobTitleByID" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.postUniquePaygrade()[pri:9, instance:testcases.RestAssured_TestCases@4d722ac9]" name="postUniquePaygrade" class="testcases.RestAssured_TestCases"/>
+        <method signature="RestAssured_TestCases.deletePaygradeById()[pri:10, instance:testcases.RestAssured_TestCases@4d722ac9]" name="deletePaygradeById" class="testcases.RestAssured_TestCases"/>
+      </group> <!-- PL1 -->
+    </groups>
+    <test started-at="2025-07-11T11:58:04 IST" name="Test" finished-at="2025-07-11T11:59:20 IST" duration-ms="76965">
+      <class name="testcases.RestAssured_TestCases">
+        <test-method signature="loginWithSeleniumAndGetCookie()[pri:0, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:58:04 IST" name="loginWithSeleniumAndGetCookie" description="Login to OrangeHRM using Selenium and retrieve session cookie" finished-at="2025-07-11T11:58:38 IST" duration-ms="34257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithSeleniumAndGetCookie -->
+        <test-method signature="getSubunitsTree()[pri:1, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:58:45 IST" name="getSubunitsTree" description="1. Send a GET request to the &#039;/web/index.php/api/v2/admin/subunits?mode=tree&#039; endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate the request uses proper Rest Assured methods (given, cookie, get, response)
+4. Validate that the response contains non-empty &#039;id&#039; and &#039;name&#039; fields in the &#039;data&#039; list
+5. Validate response status code is 200 and status line is &#039;HTTP/1.1 200 OK&#039;
+6. Print the full response body for verification" finished-at="2025-07-11T11:59:03 IST" duration-ms="18396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSubunitsTree -->
+        <test-method signature="getAdminSkills()[pri:2, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:04 IST" name="getAdminSkills" description="1. Send a GET request to the &#039;/web/index.php/api/v2/admin/skills?limit=50&amp;offset=0&#039; endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the &#039;data&#039; array in the response contains non-empty &#039;id&#039; and &#039;name&#039; fields
+5. Validate response status code is 200 and status line is &#039;HTTP/1.1 200 OK&#039;
+6. Print the complete API response body for verification" finished-at="2025-07-11T11:59:05 IST" duration-ms="1230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminSkills -->
+        <test-method signature="getAdminEdu()[pri:3, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:05 IST" name="getAdminEdu" description="1. Send a GET request to the &#039;/web/index.php/api/v2/admin/educations?limit=50&amp;offset=0&#039; endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the &#039;data&#039; array in the response contains non-empty &#039;id&#039; and &#039;name&#039; fields
+5. Verify that the status code is 200 and status line is &#039;HTTP/1.1 200 OK&#039;
+6. Print the full API response body to the console for verification" finished-at="2025-07-11T11:59:06 IST" duration-ms="1152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminEdu -->
+        <test-method signature="getAdminLicenses()[pri:4, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:06 IST" name="getAdminLicenses" description="1. Send a GET request to the &#039;/web/index.php/api/v2/admin/licenses?limit=50&amp;offset=0&#039; endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the &#039;data&#039; array in the response contains non-empty &#039;id&#039; and &#039;name&#039; fields
+5. Verify the status code is 200 and the status line is &#039;HTTP/1.1 200 OK&#039;
+6. Print the full API response body for verification" finished-at="2025-07-11T11:59:07 IST" duration-ms="1027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminLicenses -->
+        <test-method signature="getAdminLanguages()[pri:5, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:08 IST" name="getAdminLanguages" description="1. Send a GET request to the &#039;/web/index.php/api/v2/admin/languages?limit=50&amp;offset=0&#039; endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the &#039;data&#039; array in the response contains non-empty &#039;id&#039; and &#039;name&#039; fields
+5. Verify the status code is 200 and the status line is &#039;HTTP/1.1 200 OK&#039;
+6. Print the full API response body for verification" finished-at="2025-07-11T11:59:09 IST" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAdminLanguages -->
+        <test-method signature="postNewJobTitles()[pri:7, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:09 IST" name="postNewJobTitles" description="1. Generate a unique job title using a utility method
+2. Create a JSON request body with the generated job title and additional required fields
+3. Send a POST request to the &#039;/web/index.php/api/v2/admin/job-titles&#039; endpoint using a valid cookie
+4. Print and verify the status code and response body
+5. Assert that the status code is 200 and validate correct implementation using RestAssured methods" finished-at="2025-07-11T11:59:13 IST" duration-ms="4522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postNewJobTitles -->
+        <test-method signature="putJobTitleByID()[pri:8, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:13 IST" name="putJobTitleByID" description="1. Prepare a JSON request body with updated job title details
+2. Send a PUT request to the &#039;/web/index.php/api/v2/admin/job-titles/22&#039; endpoint using a valid cookie
+3. Verify and assert that the response contains a non-empty list of titles and IDs
+4. Print the status code and the full response body for verification
+5. Assert that the status code is 200 (OK) and validate correct implementation using RestAssured methods" finished-at="2025-07-11T11:59:15 IST" duration-ms="1309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putJobTitleByID -->
+        <test-method signature="postUniquePaygrade()[pri:9, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:15 IST" name="postUniquePaygrade" description="1. Dynamically generate a unique pay grade name using a helper method
+2. Send a POST request to the &#039;/web/index.php/api/v2/admin/pay-grades&#039; endpoint with a valid cookie and the generated name in the request body
+3. Extract and store the ID and name of the newly created pay grade from the response
+4. Print the generated ID, name, request body, status code, and response body for verification
+5. Assert that ID and name are not null
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods" finished-at="2025-07-11T11:59:16 IST" duration-ms="1236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postUniquePaygrade -->
+        <test-method signature="deleteValidUsers()[pri:6, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:16 IST" name="deleteValidUsers" description="1. Send a GET request to &#039;/web/index.php/api/v2/admin/users&#039; to fetch user list
+2. Extract a valid user ID for deletion (excluding Admin)
+3. Construct the DELETE request body with the extracted ID in format: {&quot;ids&quot;: [id]}
+4. Send a DELETE request to &#039;/web/index.php/api/v2/admin/users&#039; with a valid cookie and body
+5. Assert that the status code is 200 and implementation uses only RestAssured methods" finished-at="2025-07-11T11:59:19 IST" depends-on-methods="testcases.RestAssured_TestCases.loginWithSeleniumAndGetCookie" duration-ms="2572" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 200 for success. expected [200] but found [422]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 200 for success. expected [200] but found [422]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at testcases.RestAssured_TestCases.deleteValidUsers(RestAssured_TestCases.java:309)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteValidUsers -->
+        <test-method signature="deletePaygradeById()[pri:10, instance:testcases.RestAssured_TestCases@4d722ac9]" started-at="2025-07-11T11:59:19 IST" name="deletePaygradeById" description="1. Retrieve the payGradeId stored from the previous test
+2. Prepare the DELETE request body dynamically using the retrieved payGradeId
+3. Send a DELETE request to the &#039;/web/index.php/api/v2/admin/pay-grades&#039; endpoint with a valid cookie
+4. Verify that the request body is correctly passed
+5. Print and verify the status code and response body
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods" finished-at="2025-07-11T11:59:20 IST" depends-on-methods="testcases.RestAssured_TestCases.postUniquePaygrade" duration-ms="1189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePaygradeById -->
+      </class> <!-- testcases.RestAssured_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

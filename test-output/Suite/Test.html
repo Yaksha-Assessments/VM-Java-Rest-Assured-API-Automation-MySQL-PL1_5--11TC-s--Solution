@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 11 11:58:04 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>76 seconds (76965 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>PL1 </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.deleteValidUsers()'><b>deleteValidUsers</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to '/web/index.php/api/v2/admin/users' to fetch user list
+2. Extract a valid user ID for deletion (excluding Admin)
+3. Construct the DELETE request body with the extracted ID in format: {"ids": [id]}
+4. Send a DELETE request to '/web/index.php/api/v2/admin/users' with a valid cookie and body
+5. Assert that the status code is 200 and implementation uses only RestAssured methods</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 for success. expected [200] but found [422]
+	at testcases.RestAssured_TestCases.deleteValidUsers(RestAssured_TestCases.java:309)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1455138607", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1455138607'><pre>java.lang.AssertionError: Expected status code 200 for success. expected [200] but found [422]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at testcases.RestAssured_TestCases.deleteValidUsers(RestAssured_TestCases.java:309)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.deletePaygradeById()'><b>deletePaygradeById</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Retrieve the payGradeId stored from the previous test
+2. Prepare the DELETE request body dynamically using the retrieved payGradeId
+3. Send a DELETE request to the '/web/index.php/api/v2/admin/pay-grades' endpoint with a valid cookie
+4. Verify that the request body is correctly passed
+5. Print and verify the status code and response body
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.postNewJobTitles()'><b>postNewJobTitles</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Generate a unique job title using a utility method
+2. Create a JSON request body with the generated job title and additional required fields
+3. Send a POST request to the '/web/index.php/api/v2/admin/job-titles' endpoint using a valid cookie
+4. Print and verify the status code and response body
+5. Assert that the status code is 200 and validate correct implementation using RestAssured methods</td>
+<td></td>
+<td>4</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.getSubunitsTree()'><b>getSubunitsTree</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/admin/subunits?mode=tree' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate the request uses proper Rest Assured methods (given, cookie, get, response)
+4. Validate that the response contains non-empty 'id' and 'name' fields in the 'data' list
+5. Validate response status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the full response body for verification</td>
+<td></td>
+<td>18</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.getAdminSkills()'><b>getAdminSkills</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/admin/skills?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Validate response status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the complete API response body for verification</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.getAdminLicenses()'><b>getAdminLicenses</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/admin/licenses?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify the status code is 200 and the status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body for verification</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.loginWithSeleniumAndGetCookie()'><b>loginWithSeleniumAndGetCookie</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: Login to OrangeHRM using Selenium and retrieve session cookie</td>
+<td></td>
+<td>34</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.putJobTitleByID()'><b>putJobTitleByID</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Prepare a JSON request body with updated job title details
+2. Send a PUT request to the '/web/index.php/api/v2/admin/job-titles/22' endpoint using a valid cookie
+3. Verify and assert that the response contains a non-empty list of titles and IDs
+4. Print the status code and the full response body for verification
+5. Assert that the status code is 200 (OK) and validate correct implementation using RestAssured methods</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.getAdminEdu()'><b>getAdminEdu</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/admin/educations?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify that the status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body to the console for verification</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.postUniquePaygrade()'><b>postUniquePaygrade</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Dynamically generate a unique pay grade name using a helper method
+2. Send a POST request to the '/web/index.php/api/v2/admin/pay-grades' endpoint with a valid cookie and the generated name in the request body
+3. Extract and store the ID and name of the newly created pay grade from the response
+4. Print the generated ID, name, request body, status code, and response body for verification
+5. Assert that ID and name are not null
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.getAdminLanguages()'><b>getAdminLanguages</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/admin/languages?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify the status code is 200 and the status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body for verification</td>
+<td></td>
+<td>0</td>
+<td>testcases.RestAssured_TestCases@4d722ac9</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>testcases.RestAssured_TestCases.getAdminLicenses<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Send a GET request to the '/web/index.php/api/v2/admin/licenses?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify the status code is 200 and the status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body for verification</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.postUniquePaygrade<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Dynamically generate a unique pay grade name using a helper method
+2. Send a POST request to the '/web/index.php/api/v2/admin/pay-grades' endpoint with a valid cookie and the generated name in the request body
+3. Extract and store the ID and name of the newly created pay grade from the response
+4. Print the generated ID, name, request body, status code, and response body for verification
+5. Assert that ID and name are not null
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.getSubunitsTree<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Send a GET request to the '/web/index.php/api/v2/admin/subunits?mode=tree' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate the request uses proper Rest Assured methods (given, cookie, get, response)
+4. Validate that the response contains non-empty 'id' and 'name' fields in the 'data' list
+5. Validate response status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the full response body for verification</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.getAdminEdu<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Send a GET request to the '/web/index.php/api/v2/admin/educations?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify that the status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body to the console for verification</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.getAdminLanguages<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Send a GET request to the '/web/index.php/api/v2/admin/languages?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Verify the status code is 200 and the status line is 'HTTP/1.1 200 OK'
+6. Print the full API response body for verification</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.postNewJobTitles<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Generate a unique job title using a utility method
+2. Create a JSON request body with the generated job title and additional required fields
+3. Send a POST request to the '/web/index.php/api/v2/admin/job-titles' endpoint using a valid cookie
+4. Print and verify the status code and response body
+5. Assert that the status code is 200 and validate correct implementation using RestAssured methods</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.deletePaygradeById<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Retrieve the payGradeId stored from the previous test
+2. Prepare the DELETE request body dynamically using the retrieved payGradeId
+3. Send a DELETE request to the '/web/index.php/api/v2/admin/pay-grades' endpoint with a valid cookie
+4. Verify that the request body is correctly passed
+5. Print and verify the status code and response body
+6. Assert that the status code is 200 and validate implementation correctness using RestAssured methods</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.putJobTitleByID<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Prepare a JSON request body with updated job title details
+2. Send a PUT request to the '/web/index.php/api/v2/admin/job-titles/22' endpoint using a valid cookie
+3. Verify and assert that the response contains a non-empty list of titles and IDs
+4. Print the status code and the full response body for verification
+5. Assert that the status code is 200 (OK) and validate correct implementation using RestAssured methods</i></td></tr>
+<tr><td>testcases.RestAssured_TestCases.getAdminSkills<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>1. Send a GET request to the '/web/index.php/api/v2/admin/skills?limit=50&offset=0' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Validate that the method uses Rest Assured methods: given, cookie, get, response
+4. Assert that the 'data' array in the response contains non-empty 'id' and 'name' fields
+5. Validate response status code is 200 and status line is 'HTTP/1.1 200 OK'
+6. Print the complete API response body for verification</i></td></tr>
+</table>
